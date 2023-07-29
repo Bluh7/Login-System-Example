@@ -1,3 +1,4 @@
+require("dotenv").config()
 const UserService = require("../services/userService")
 const LoginController = require("./loginController")
 
