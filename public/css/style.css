@@ -1,0 +1,289 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+input[type="password"] {
+  -webkit-text-security: disc;
+}
+
+@keyframes coming-from-left {
+  0% {
+    opacity: 0;
+    transform: translateX(-30%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background-color: #252422;
+  color: #fff;
+}
+
+p {
+  letter-spacing: 1px;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 1rem;
+  }
+}
+
+#welcome-user p {
+  font-size: 3rem;
+  animation: coming-from-left 0.5s ease-in-out;
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+}
+
+@media (max-width: 768px) {
+  #welcome-user p {
+    font-size: 2rem;
+  }
+}
+
+hr {
+  margin: 0.5rem 0;
+}
+
+#not-found p {
+  font-size: 3rem;
+}
+
+#not-found h1 {
+  font-size: 3.5rem;
+  font-weight: bolder;
+  letter-spacing: -2px;
+}
+
+@media (max-width: 768px) {
+  #not-found p {
+    font-size: 2rem;
+  }
+  #not-found h1 {
+    font-size: 2.5rem;
+  }
+}
+
+#go-home {
+  position: absolute;
+  bottom: 20%;
+  width: 100%;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+#go-home a button {
+  color: #fff;
+  background-color: inherit;
+  border: none;
+  border-radius: 30px;
+  padding: 0.5rem 2.5rem;
+  font-size: 2rem;
+  background-color: rgba(255, 255, 255, 0.05);
+  transition: all 0.2s ease-in-out;
+  letter-spacing: 2px;
+}
+
+#go-home a button:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  cursor: pointer;
+}
+
+.form-card {
+  max-width: 500px;
+  background-color: #1b1b19;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  margin: auto;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+input {
+  width: 100%;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  background-color: #252422;
+  color: #fff;
+  font-size: 1.5rem;
+  outline: none;
+}
+
+.form h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+  letter-spacing: -2px;
+  text-align: center;
+}
+
+.form h1 span {
+  text-decoration: underline #eb5e28 2px;
+  cursor: default;
+}
+
+.form h1 a {
+  color: #fff;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+}
+
+.form h1 a:hover {
+  color: #eb5e28;
+}
+
+.form button {
+  padding: 0.5rem 2.5rem;
+  border: none;
+  border-radius: 30px;
+  background-color: rgba(255, 255, 255, 0.05);
+  color: #fff;
+  font-size: 2rem;
+  outline: none;
+  transition: all 0.2s ease-in-out;
+  letter-spacing: 2px;
+}
+
+.form button:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  cursor: pointer;
+}
+
+.form label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.form-group-button {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.focus {
+  color: #eb5e28;
+  font-weight: bold;
+}
+
+.focus-pancakes {
+  color: #eb5e28;
+  font-weight: bold;
+  text-decoration: underline #eb5e28 3px;
+}
+
+#pancakes-header {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  letter-spacing: -2px;
+  text-align: center;
+}
+
+#i-want {
+  position: absolute;
+  bottom: 20%;
+  width: 100%;
+  text-align: center;
+  padding: 1rem 0;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  #i-want {
+    bottom: 10%;
+  }
+}
+
+#i-want a {
+  color: #fff;
+  text-decoration: underline #eb5e28 2px;
+  transition: all 0.2s ease-in-out;
+  letter-spacing: -2px;
+}
+
+#i-want a:hover {
+  color: #eb5e28;
+  text-decoration: underline #eb5e28 2px;
+  letter-spacing: 2px;
+}
+
+@media (max-width: 768px) {
+  #i-want a {
+    letter-spacing: 0;
+  }
+}
+
+#pancake-photo-card {
+  max-width: 800px;
+  margin: auto;
+  padding-bottom: 1rem;
+}
+
+@media (max-width: 768px) {
+  #pancake-photo-card {
+    max-width: 500px;
+  }
+}
+
+#pancake-photo-card img {
+  width: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+#logout a {
+  padding-bottom: 2rem;
+}
+
+#logout a button {
+  color: #fff;
+  background-color: inherit;
+  border: none;
+  border-radius: 30px;
+  padding: 0.5rem 2.5rem;
+  font-size: 2rem;
+  background-color: rgba(255, 255, 255, 0.05);
+  transition: all 0.2s ease-in-out;
+  letter-spacing: 2px;
+}
+
+#logout a button:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  cursor: pointer;
+}
+
+.errors {
+  color: #eb5e28;
+  font-weight: bold;
+  width: 100%;
+  text-align: center;
+  background-color: #1b1b19;
+}
+
+.errors p {
+  padding: 1rem;
+}

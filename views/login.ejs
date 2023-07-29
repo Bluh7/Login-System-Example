@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('partials/head') %>
+  </head>
+  <body>
+    <div class="container">
+      <!-- get errors from flash -->
+      <% if (errors.length > 0) { %>
+      <div class="errors">
+        <% errors.forEach(function(error) { %>
+        <p><%= error %></p>
+        <% }) %>
+      </div>
+      <% } %>
+      <div class="form">
+        <form action="/session/new" method="post">
+          <h1><span>Login</span> / <a href="/users/new">Sign Up</a></h1>
+          <div class="form-card">
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="pancake@master.com"
+                value="<%= form.email %>"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="password">Password</label>
+              <input
+                type="password"
+                name="password"
+                id="password"
+                placeholder="&bull;&bull;&bull;&bull;&bull;"
+                required
+              />
+            </div>
+            <div class="form-group-button">
+              <button type="submit">Login</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

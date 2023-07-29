@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('partials/head') %>
+  </head>
+  <body>
+    <div class="container">
+      <div id="welcome-user">
+        <p>
+          Hello, <span class="focus"><%=user.username%></span> welcome to
+          pancake page!
+        </p>
+      </div>
+      <div id="pancake-photo-card">
+        <div id="pancake-photo">
+          <img src="/img/pancake.jpg" alt="pancake" />
+        </div>
+      </div>
+      <div id="logout">
+        <a href="/session/destroy"><button>Logout</button></a>
+      </div>
+    </div>
+  </body>
+</html>
