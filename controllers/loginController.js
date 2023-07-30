@@ -23,6 +23,14 @@ class LoginController {
     )
   }
 
+  static createAuthCookie(res, token) {
+    res.cookie("jwt", token, {
+      httpOnly: true,
+      maxAge: 1000 * 60 * 60 * 24 * 30, // 30 days
+      secure: process.env.NODE_ENV === "production",
+    })
+  }
+
   static async loginPost(req, res) {
     const { email, password } = req.body || {}
 
@@ -31,11 +39,7 @@ class LoginController {
       const user = await UserService.login(email, password)
       const token = LoginController.createJwtToken(user)
 
-      res.cookie("jwt", token, {
-        httpOnly: true,
-        maxAge: 1000 * 60 * 60 * 24 * 30, // 30 days
-        secure: process.env.NODE_ENV === "production",
-      })
+      LoginController.createAuthCookie(res, token)
 
       return res.redirect("/home")
     } catch (err) {
